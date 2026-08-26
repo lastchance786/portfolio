@@ -33,7 +33,18 @@ export default function Home() {
     <header className="nav"><a className="brand" href="#about"><span>TW</span>Tejas Wakchoure</a><nav>{nav.map(n => <a key={n} href={`#${n.toLowerCase()}`}>{n}</a>)}</nav><button className="menu" onClick={() => setMenu(!menu)} aria-label="Menu">{menu ? <X/> : <Menu/>}</button>{menu && <div className="mobile-nav">{nav.map(n => <a key={n} href={`#${n.toLowerCase()}`} onClick={()=>setMenu(false)}>{n}</a>)}</div>}</header>
 
     <section id="about" className="hero shell">
-      <div className="hero-copy"><div className="pill"><Sparkles size={16}/>Turning data into confident decisions</div><p className="eyebrow">Hello, I’m</p><h1>Tejas<br/><span>Wakchoure.</span></h1><h2>Assistant Manager · Business Intelligence</h2><p className="lead">I turn complex marketing and business data into clear decisions, scalable reporting systems, and reliable analytics workflows.</p><div className="actions"><a className="primary" href="#projects">Explore my work <ArrowUpRight size={18}/></a><a className="secondary" href="/resume.pdf" download><Download size={18}/>Download résumé</a></div><p className="location"><MapPin size={16}/>Pune, Maharashtra, India</p></div>
+      <div className="hero-copy"><div className="pill"><Sparkles size={16}/>Turning data into confident decisions</div><p className="eyebrow">Hello, I’m</p><h1>Tejas<br/><span>Wakchoure.</span></h1><h2>Assistant Manager · Business Intelligence</h2><p className="lead">I turn complex marketing and business data into clear decisions, scalable reporting systems, and reliable analytics workflows.</p><div className="actions"><a className="primary" href="#projects">Explore my work <ArrowUpRight size={18}/></a> 
+      
+        {/* <a className="secondary" href="/resume.pdf" download><Download size={18}/>Download résumé</a> */}
+      <a
+  className="secondary"
+  href="/CV_Tejas_Wakchoure.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Download
+    
+      </div><p className="location"><MapPin size={16}/>Pune, Maharashtra, India</p></div>
       <div className="portrait-wrap"><div className="portrait-card"><Image src="/tejas-wakchoure.jpg" alt="Professional portrait" width={900} height={1200} priority className="portrait"/><div className="portrait-caption"><strong>Insight. Automation. Impact.</strong><span>Business intelligence with practical outcomes.</span></div></div></div>
     </section>
 
